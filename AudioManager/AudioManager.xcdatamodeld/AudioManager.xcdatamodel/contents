@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Musica" syncable="YES">
-        <attribute name="pasta" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diretorio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pathUrl" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

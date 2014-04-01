@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "Gravador.h"
 
 @interface GravarViewController : UIViewController
-
+@property Gravador * gravador;
 @end

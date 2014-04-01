@@ -10,9 +10,17 @@
 
 @interface GravarViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *gravarBT;
+
+
 @end
 
 @implementation GravarViewController
+@synthesize gravador;
+
+- (IBAction)gravarBTtap:(id)sender {
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self setGravador:[[Gravador alloc] init]];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B721580518EB3B7800F90D7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B721580418EB3B7800F90D7F /* AVFoundation.framework */; };
+		B721580618EB3C0400F90D7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6718EB33B600B10E06 /* CoreData.framework */; };
+		B721580918EB42C800F90D7F /* Gravador.m in Sources */ = {isa = PBXBuildFile; fileRef = B721580818EB42C800F90D7F /* Gravador.m */; };
 		B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73654FC18EB369100AAD0DB /* PlayerViewController.m */; };
 		B7E95E6218EB33B600B10E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6118EB33B600B10E06 /* Foundation.framework */; };
 		B7E95E6418EB33B600B10E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */; };
 		B7E95E6618EB33B600B10E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6518EB33B600B10E06 /* UIKit.framework */; };
-		B7E95E6818EB33B600B10E06 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6718EB33B600B10E06 /* CoreData.framework */; };
 		B7E95E6E18EB33B600B10E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7E95E6C18EB33B600B10E06 /* InfoPlist.strings */; };
 		B7E95E7018EB33B600B10E06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E6F18EB33B600B10E06 /* main.m */; };
 		B7E95E7418EB33B600B10E06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E7318EB33B600B10E06 /* AppDelegate.m */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B721580218EB3B6C00F90D7F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		B721580418EB3B7800F90D7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B721580718EB42C800F90D7F /* Gravador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gravador.h; sourceTree = "<group>"; };
+		B721580818EB42C800F90D7F /* Gravador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gravador.m; sourceTree = "<group>"; };
 		B73654FB18EB369100AAD0DB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		B73654FC18EB369100AAD0DB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		B7E95E5E18EB33B600B10E06 /* AudioManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,8 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B721580618EB3C0400F90D7F /* CoreData.framework in Frameworks */,
+				B721580518EB3B7800F90D7F /* AVFoundation.framework in Frameworks */,
 				B7E95E6418EB33B600B10E06 /* CoreGraphics.framework in Frameworks */,
-				B7E95E6818EB33B600B10E06 /* CoreData.framework in Frameworks */,
 				B7E95E6618EB33B600B10E06 /* UIKit.framework in Frameworks */,
 				B7E95E6218EB33B600B10E06 /* Foundation.framework in Frameworks */,
 			);
@@ -123,6 +130,8 @@
 		B7E95E6018EB33B600B10E06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B721580418EB3B7800F90D7F /* AVFoundation.framework */,
+				B721580218EB3B6C00F90D7F /* CoreAudio.framework */,
 				B7E95E6118EB33B600B10E06 /* Foundation.framework */,
 				B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */,
 				B7E95E6518EB33B600B10E06 /* UIKit.framework */,
@@ -148,6 +157,8 @@
 				B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */,
 				B7E95E9D18EB33CD00B10E06 /* GravarViewController.h */,
 				B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */,
+				B721580718EB42C800F90D7F /* Gravador.h */,
+				B721580818EB42C800F90D7F /* Gravador.m */,
 				B7E95E9F18EB33CD00B10E06 /* ViewController.h */,
 				B7E95EA018EB33CD00B10E06 /* ViewController.m */,
 				B7E95E7818EB33B600B10E06 /* Images.xcassets */,
@@ -291,6 +302,7 @@
 				B7E95EA418EB33CD00B10E06 /* BibliotecaViewController.m in Sources */,
 				B7E95EA218EB33CD00B10E06 /* AudioMenagerViewController.m in Sources */,
 				B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */,
+				B721580918EB42C800F90D7F /* Gravador.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
