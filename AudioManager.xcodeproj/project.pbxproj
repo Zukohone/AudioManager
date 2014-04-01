@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73654FC18EB369100AAD0DB /* PlayerViewController.m */; };
 		B7E95E6218EB33B600B10E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6118EB33B600B10E06 /* Foundation.framework */; };
 		B7E95E6418EB33B600B10E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */; };
 		B7E95E6618EB33B600B10E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6518EB33B600B10E06 /* UIKit.framework */; };
@@ -22,6 +23,12 @@
 		B7E95E8318EB33B600B10E06 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6718EB33B600B10E06 /* CoreData.framework */; };
 		B7E95E8B18EB33B600B10E06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7E95E8918EB33B600B10E06 /* InfoPlist.strings */; };
 		B7E95E8D18EB33B600B10E06 /* AudioManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E8C18EB33B600B10E06 /* AudioManagerTests.m */; };
+		B7E95EA118EB33CD00B10E06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E95E9618EB33CD00B10E06 /* Main.storyboard */; };
+		B7E95EA218EB33CD00B10E06 /* AudioMenagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9818EB33CD00B10E06 /* AudioMenagerViewController.m */; };
+		B7E95EA318EB33CD00B10E06 /* AdicionarBibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9A18EB33CD00B10E06 /* AdicionarBibliotecaViewController.m */; };
+		B7E95EA418EB33CD00B10E06 /* BibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */; };
+		B7E95EA518EB33CD00B10E06 /* GravarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */; };
+		B7E95EA618EB33CD00B10E06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95EA018EB33CD00B10E06 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B73654FB18EB369100AAD0DB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		B73654FC18EB369100AAD0DB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		B7E95E5E18EB33B600B10E06 /* AudioManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E95E6118EB33B600B10E06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +62,17 @@
 		B7E95E8818EB33B600B10E06 /* AudioManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AudioManagerTests-Info.plist"; sourceTree = "<group>"; };
 		B7E95E8A18EB33B600B10E06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7E95E8C18EB33B600B10E06 /* AudioManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioManagerTests.m; sourceTree = "<group>"; };
+		B7E95E9618EB33CD00B10E06 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B7E95E9718EB33CD00B10E06 /* AudioMenagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioMenagerViewController.h; sourceTree = "<group>"; };
+		B7E95E9818EB33CD00B10E06 /* AudioMenagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioMenagerViewController.m; sourceTree = "<group>"; };
+		B7E95E9918EB33CD00B10E06 /* AdicionarBibliotecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdicionarBibliotecaViewController.h; sourceTree = "<group>"; };
+		B7E95E9A18EB33CD00B10E06 /* AdicionarBibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdicionarBibliotecaViewController.m; sourceTree = "<group>"; };
+		B7E95E9B18EB33CD00B10E06 /* BibliotecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BibliotecaViewController.h; sourceTree = "<group>"; };
+		B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BibliotecaViewController.m; sourceTree = "<group>"; };
+		B7E95E9D18EB33CD00B10E06 /* GravarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravarViewController.h; sourceTree = "<group>"; };
+		B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravarViewController.m; sourceTree = "<group>"; };
+		B7E95E9F18EB33CD00B10E06 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B7E95EA018EB33CD00B10E06 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +135,21 @@
 		B7E95E6918EB33B600B10E06 /* AudioManager */ = {
 			isa = PBXGroup;
 			children = (
+				B73654FB18EB369100AAD0DB /* PlayerViewController.h */,
+				B73654FC18EB369100AAD0DB /* PlayerViewController.m */,
 				B7E95E7218EB33B600B10E06 /* AppDelegate.h */,
 				B7E95E7318EB33B600B10E06 /* AppDelegate.m */,
+				B7E95E9618EB33CD00B10E06 /* Main.storyboard */,
+				B7E95E9718EB33CD00B10E06 /* AudioMenagerViewController.h */,
+				B7E95E9818EB33CD00B10E06 /* AudioMenagerViewController.m */,
+				B7E95E9918EB33CD00B10E06 /* AdicionarBibliotecaViewController.h */,
+				B7E95E9A18EB33CD00B10E06 /* AdicionarBibliotecaViewController.m */,
+				B7E95E9B18EB33CD00B10E06 /* BibliotecaViewController.h */,
+				B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */,
+				B7E95E9D18EB33CD00B10E06 /* GravarViewController.h */,
+				B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */,
+				B7E95E9F18EB33CD00B10E06 /* ViewController.h */,
+				B7E95EA018EB33CD00B10E06 /* ViewController.m */,
 				B7E95E7818EB33B600B10E06 /* Images.xcassets */,
 				B7E95E7518EB33B600B10E06 /* AudioManager.xcdatamodeld */,
 				B7E95E6A18EB33B600B10E06 /* Supporting Files */,
@@ -228,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E95EA118EB33CD00B10E06 /* Main.storyboard in Resources */,
 				B7E95E6E18EB33B600B10E06 /* InfoPlist.strings in Resources */,
 				B7E95E7918EB33B600B10E06 /* Images.xcassets in Resources */,
 			);
@@ -250,7 +284,13 @@
 			files = (
 				B7E95E7718EB33B600B10E06 /* AudioManager.xcdatamodeld in Sources */,
 				B7E95E7418EB33B600B10E06 /* AppDelegate.m in Sources */,
+				B7E95EA618EB33CD00B10E06 /* ViewController.m in Sources */,
+				B7E95EA318EB33CD00B10E06 /* AdicionarBibliotecaViewController.m in Sources */,
+				B7E95EA518EB33CD00B10E06 /* GravarViewController.m in Sources */,
 				B7E95E7018EB33B600B10E06 /* main.m in Sources */,
+				B7E95EA418EB33CD00B10E06 /* BibliotecaViewController.m in Sources */,
+				B7E95EA218EB33CD00B10E06 /* AudioMenagerViewController.m in Sources */,
+				B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +415,7 @@
 				GCC_PREFIX_HEADER = "AudioManager/AudioManager-Prefix.pch";
 				INFOPLIST_FILE = "AudioManager/AudioManager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,6 +429,7 @@
 				GCC_PREFIX_HEADER = "AudioManager/AudioManager-Prefix.pch";
 				INFOPLIST_FILE = "AudioManager/AudioManager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -453,6 +495,7 @@
 				B7E95E9218EB33B600B10E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7E95E9318EB33B600B10E06 /* Build configuration list for PBXNativeTarget "AudioManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +504,7 @@
 				B7E95E9518EB33B600B10E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
