@@ -10,5 +10,6 @@
 #import "AdicionarBibliotecaViewController.h"
 
 @interface AudioMenagerViewController : UITableViewController <AdicionarBibliotecaViewControllerDelegate>
+@property NSMutableArray *categorias;
 
 @end

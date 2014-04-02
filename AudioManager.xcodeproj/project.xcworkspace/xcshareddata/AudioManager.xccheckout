@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1C199E6E-E46B-405C-BA87-B2F64EB190F5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AudioManager</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>232AB471-E2B7-468F-BC73-FD614FEFDF0F</key>
+		<string>https://github.com/Zukohone/audioManager.git</string>
+		<key>DE98FA87-560B-4705-A118-76C3553B2DB2</key>
+		<string>https://github.com/Zukohone/AudioManager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AudioManager.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>232AB471-E2B7-468F-BC73-FD614FEFDF0F</key>
+		<string>../../AudioManager</string>
+		<key>DE98FA87-560B-4705-A118-76C3553B2DB2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Zukohone/AudioManager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE98FA87-560B-4705-A118-76C3553B2DB2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE98FA87-560B-4705-A118-76C3553B2DB2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AudioManager</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>232AB471-E2B7-468F-BC73-FD614FEFDF0F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AudioManager</string>
+		</dict>
+	</array>
+</dict>
+</plist>

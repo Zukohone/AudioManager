@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70BDD7718EC867E00CF4D94 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70BDD7618EC867E00CF4D94 /* CoreMedia.framework */; };
+		B70BDD7918EC868600CF4D94 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70BDD7818EC868600CF4D94 /* MediaPlayer.framework */; };
 		B721580518EB3B7800F90D7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B721580418EB3B7800F90D7F /* AVFoundation.framework */; };
 		B721580618EB3C0400F90D7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6718EB33B600B10E06 /* CoreData.framework */; };
 		B721580918EB42C800F90D7F /* Gravador.m in Sources */ = {isa = PBXBuildFile; fileRef = B721580818EB42C800F90D7F /* Gravador.m */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70BDD7618EC867E00CF4D94 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B70BDD7818EC868600CF4D94 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		B721580218EB3B6C00F90D7F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		B721580418EB3B7800F90D7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B721580718EB42C800F90D7F /* Gravador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gravador.h; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70BDD7918EC868600CF4D94 /* MediaPlayer.framework in Frameworks */,
+				B70BDD7718EC867E00CF4D94 /* CoreMedia.framework in Frameworks */,
 				B721580618EB3C0400F90D7F /* CoreData.framework in Frameworks */,
 				B721580518EB3B7800F90D7F /* AVFoundation.framework in Frameworks */,
 				B7E95E6418EB33B600B10E06 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +136,8 @@
 		B7E95E6018EB33B600B10E06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B70BDD7818EC868600CF4D94 /* MediaPlayer.framework */,
+				B70BDD7618EC867E00CF4D94 /* CoreMedia.framework */,
 				B721580418EB3B7800F90D7F /* AVFoundation.framework */,
 				B721580218EB3B6C00F90D7F /* CoreAudio.framework */,
 				B7E95E6118EB33B600B10E06 /* Foundation.framework */,
