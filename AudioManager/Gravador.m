@@ -43,6 +43,8 @@
     
     printf("Iniciando sessao de audio e suas configuracoes...\n");
     
+    NSString * nomeDoAudio = [self dateString];
+    
     // Inicia sessão de audio
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
@@ -62,7 +64,7 @@
     printf("Gravador iniciado!\n");
     
     //Definicao do caminho em que sera salvo
-    NSString *pathToSave = [documentPath stringByAppendingPathComponent:[self dateString]];
+    NSString *pathToSave = [documentPath stringByAppendingPathComponent:nomeDoAudio];
     NSURL *pathUrl = [NSURL fileURLWithPath:pathToSave];
     
     // Iniciando e preparando o gravador
@@ -77,6 +79,7 @@
     NSManagedObjectContext *context = [self managedObjectContext];
     NSManagedObject *newMusica = [NSEntityDescription insertNewObjectForEntityForName:@"Musica" inManagedObjectContext:context];
     [newMusica setValue:pathUrl.path forKey:@"pathUrl"];
+    [newMusica setValue:nomeDoAudio forKey:@"nome"];
     printf("Arquivo criado em: %s\n", [[newMusica valueForKey:@"pathUrl"] UTF8String]);
     printf("Url gravada no banco!\n");
     

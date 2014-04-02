@@ -7,10 +7,11 @@
     </entity>
     <entity name="Musica" syncable="YES">
         <attribute name="diretorio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pathUrl" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Musica" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Biblioteca" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Musica" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
