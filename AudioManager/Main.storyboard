@@ -201,18 +201,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL1-io-90u">
-                                <rect key="frame" x="137" y="165" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL1-io-90u">
+                                <rect key="frame" x="73" y="220" width="174" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gravar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="micBT.png"/>
+                                <state key="highlighted" image="micBT-ON.png"/>
                                 <connections>
                                     <action selector="gravarBTtap:" destination="Jqx-Rp-6Km" eventType="touchUpInside" id="KLL-eH-5rw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="zL1-io-90u" secondAttribute="centerY" id="pWn-iv-64x"/>
+                            <constraint firstAttribute="centerX" secondItem="zL1-io-90u" secondAttribute="centerX" id="vWy-UV-4cm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recorder" id="nY2-mp-bvU"/>
                     <connections>
@@ -221,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzI-wP-ePU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387" y="91"/>
+            <point key="canvasLocation" x="1391" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="scs-1b-z3A">
@@ -267,6 +271,10 @@
             <point key="canvasLocation" x="937" y="890"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="micBT-ON.png" width="128" height="128"/>
+        <image name="micBT.png" width="128" height="128"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

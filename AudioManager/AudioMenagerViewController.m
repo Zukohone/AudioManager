@@ -106,4 +106,73 @@
     return cell;
 }
 
+
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+
+- (BOOL) deletaDiretorio:(NSString*) path
+{
+    
+    return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+}
+
+
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+     
+     NSManagedObjectContext *context = [self managedObjectContext];
+     NSManagedObject *biblioteca = [self.bibliotecas objectAtIndex:indexPath.row];
+     
+     //deleta a pasta dentro do aplicativo
+     [self deletaDiretorio:[biblioteca valueForKey:@"dirPath"]];
+     
+     
+     // Delete object from database
+     [context deleteObject:[self.bibliotecas objectAtIndex:indexPath.row]];
+     
+     NSError *error = nil;
+     if (![context save:&error]) {
+         NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+         return;
+     }
+     
+     // Remove device from table view
+     [self.bibliotecas removeObjectAtIndex:indexPath.row];
+     [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ 
+ */
+
+
 @end

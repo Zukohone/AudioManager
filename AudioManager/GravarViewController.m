@@ -20,6 +20,15 @@
 
 - (IBAction)gravarBTtap:(id)sender {
     
+    UIButton *gravarBT = (UIButton*)sender;
+    if (gravarBT.selected == NO) {
+        [gravarBT setImage:[UIImage imageNamed:@"micBT-ON.png"] forState:UIControlStateNormal];
+    } else {
+        [gravarBT setImage:[UIImage imageNamed:@"micBT.png"] forState:UIControlStateNormal];
+    }
+    
+    gravarBT.selected = !gravarBT.selected;
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

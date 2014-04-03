@@ -12,6 +12,8 @@
 		B721580518EB3B7800F90D7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B721580418EB3B7800F90D7F /* AVFoundation.framework */; };
 		B721580618EB3C0400F90D7F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6718EB33B600B10E06 /* CoreData.framework */; };
 		B721580918EB42C800F90D7F /* Gravador.m in Sources */ = {isa = PBXBuildFile; fileRef = B721580818EB42C800F90D7F /* Gravador.m */; };
+		B72BB41C18EDDAB200737245 /* micBT-ON.png in Resources */ = {isa = PBXBuildFile; fileRef = B72BB41A18EDDAB200737245 /* micBT-ON.png */; };
+		B72BB41D18EDDAB200737245 /* micBT.png in Resources */ = {isa = PBXBuildFile; fileRef = B72BB41B18EDDAB200737245 /* micBT.png */; };
 		B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73654FC18EB369100AAD0DB /* PlayerViewController.m */; };
 		B7E95E6218EB33B600B10E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6118EB33B600B10E06 /* Foundation.framework */; };
 		B7E95E6418EB33B600B10E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */; };
@@ -52,6 +54,8 @@
 		B721580418EB3B7800F90D7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B721580718EB42C800F90D7F /* Gravador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gravador.h; sourceTree = "<group>"; };
 		B721580818EB42C800F90D7F /* Gravador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gravador.m; sourceTree = "<group>"; };
+		B72BB41A18EDDAB200737245 /* micBT-ON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "micBT-ON.png"; sourceTree = "<group>"; };
+		B72BB41B18EDDAB200737245 /* micBT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micBT.png; sourceTree = "<group>"; };
 		B73654FB18EB369100AAD0DB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		B73654FC18EB369100AAD0DB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		B7E95E5E18EB33B600B10E06 /* AudioManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,8 @@
 		B7E95E6A18EB33B600B10E06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B72BB41A18EDDAB200737245 /* micBT-ON.png */,
+				B72BB41B18EDDAB200737245 /* micBT.png */,
 				B7E95E6B18EB33B600B10E06 /* AudioManager-Info.plist */,
 				B7E95E6C18EB33B600B10E06 /* InfoPlist.strings */,
 				B7E95E6F18EB33B600B10E06 /* main.m */,
@@ -280,6 +286,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72BB41D18EDDAB200737245 /* micBT.png in Resources */,
+				B72BB41C18EDDAB200737245 /* micBT-ON.png in Resources */,
 				B7E95EA118EB33CD00B10E06 /* Main.storyboard in Resources */,
 				B7E95E6E18EB33B600B10E06 /* InfoPlist.strings in Resources */,
 				B7E95E7918EB33B600B10E06 /* Images.xcassets in Resources */,
