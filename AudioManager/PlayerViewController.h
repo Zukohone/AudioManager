@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TituloCell.h"
 
 @interface PlayerViewController : UIViewController
+
+@property (strong, nonatomic) NSMutableArray *songsList;
 
 @end

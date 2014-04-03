@@ -15,6 +15,8 @@
 		B72BB41C18EDDAB200737245 /* micBT-ON.png in Resources */ = {isa = PBXBuildFile; fileRef = B72BB41A18EDDAB200737245 /* micBT-ON.png */; };
 		B72BB41D18EDDAB200737245 /* micBT.png in Resources */ = {isa = PBXBuildFile; fileRef = B72BB41B18EDDAB200737245 /* micBT.png */; };
 		B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73654FC18EB369100AAD0DB /* PlayerViewController.m */; };
+		B7B3889818EDE81400E406A7 /* TituloCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B3889718EDE81400E406A7 /* TituloCell.m */; };
+		B7B3889B18EDECF800E406A7 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B3889A18EDECF800E406A7 /* AudioPlayer.m */; };
 		B7E95E6218EB33B600B10E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6118EB33B600B10E06 /* Foundation.framework */; };
 		B7E95E6418EB33B600B10E06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */; };
 		B7E95E6618EB33B600B10E06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6518EB33B600B10E06 /* UIKit.framework */; };
@@ -58,6 +60,10 @@
 		B72BB41B18EDDAB200737245 /* micBT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micBT.png; sourceTree = "<group>"; };
 		B73654FB18EB369100AAD0DB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		B73654FC18EB369100AAD0DB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		B7B3889618EDE81400E406A7 /* TituloCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TituloCell.h; sourceTree = "<group>"; };
+		B7B3889718EDE81400E406A7 /* TituloCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TituloCell.m; sourceTree = "<group>"; };
+		B7B3889918EDECF800E406A7 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		B7B3889A18EDECF800E406A7 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		B7E95E5E18EB33B600B10E06 /* AudioManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E95E6118EB33B600B10E06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B7E95E6318EB33B600B10E06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,10 +167,14 @@
 				B7E95E7218EB33B600B10E06 /* AppDelegate.h */,
 				B7E95E7318EB33B600B10E06 /* AppDelegate.m */,
 				B7E95E9618EB33CD00B10E06 /* Main.storyboard */,
+				B7B3889618EDE81400E406A7 /* TituloCell.h */,
+				B7B3889718EDE81400E406A7 /* TituloCell.m */,
 				B7E95E9718EB33CD00B10E06 /* AudioMenagerViewController.h */,
 				B7E95E9818EB33CD00B10E06 /* AudioMenagerViewController.m */,
 				B7E95E9918EB33CD00B10E06 /* AdicionarBibliotecaViewController.h */,
 				B7E95E9A18EB33CD00B10E06 /* AdicionarBibliotecaViewController.m */,
+				B7B3889918EDECF800E406A7 /* AudioPlayer.h */,
+				B7B3889A18EDECF800E406A7 /* AudioPlayer.m */,
 				B7E95E9B18EB33CD00B10E06 /* BibliotecaViewController.h */,
 				B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */,
 				B7E95E9D18EB33CD00B10E06 /* GravarViewController.h */,
@@ -311,10 +321,12 @@
 			files = (
 				B7E95E7718EB33B600B10E06 /* AudioManager.xcdatamodeld in Sources */,
 				B7E95E7418EB33B600B10E06 /* AppDelegate.m in Sources */,
+				B7B3889818EDE81400E406A7 /* TituloCell.m in Sources */,
 				B7E95EA618EB33CD00B10E06 /* ViewController.m in Sources */,
 				B7E95EA318EB33CD00B10E06 /* AdicionarBibliotecaViewController.m in Sources */,
 				B7E95EA518EB33CD00B10E06 /* GravarViewController.m in Sources */,
 				B7E95E7018EB33B600B10E06 /* main.m in Sources */,
+				B7B3889B18EDECF800E406A7 /* AudioPlayer.m in Sources */,
 				B7E95EA418EB33CD00B10E06 /* BibliotecaViewController.m in Sources */,
 				B7E95EA218EB33CD00B10E06 /* AudioMenagerViewController.m in Sources */,
 				B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */,

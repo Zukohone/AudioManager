@@ -21,6 +21,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *labelNome;
 @property (weak, nonatomic) IBOutlet UITextField *labelDesc;
-@property (strong) NSMutableArray *musicas;
+@property (strong) NSMutableArray *sounds;
 
 @end

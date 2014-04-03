@@ -43,6 +43,8 @@
     
     printf("Iniciando sessao de audio e suas configuracoes...\n");
     
+    //singleton
+    TituloCell *sharedManager = [TituloCell sharedTituloCell];
     NSString * nomeDoAudio = [self dateString];
     
     // Inicia sessão de audio
@@ -64,7 +66,9 @@
     printf("Gravador iniciado!\n");
     
     //Definicao do caminho em que sera salvo
-    NSString *pathToSave = [documentPath stringByAppendingPathComponent:nomeDoAudio];
+    //NSString *pathToSave = [documentPath stringByAppendingPathComponent:nomeDoAudio];
+    NSString *pathToSave = [documentPath stringByAppendingPathComponent:sharedManager.text];
+    pathToSave = [pathToSave stringByAppendingString:[NSString stringWithFormat:@"/%@", nomeDoAudio]];
     NSURL *pathUrl = [NSURL fileURLWithPath:pathToSave];
     
     // Iniciando e preparando o gravador
@@ -77,10 +81,11 @@
     
     // cria um manageObject
     NSManagedObjectContext *context = [self managedObjectContext];
-    NSManagedObject *newMusica = [NSEntityDescription insertNewObjectForEntityForName:@"Musica" inManagedObjectContext:context];
-    [newMusica setValue:pathUrl.path forKey:@"pathUrl"];
-    [newMusica setValue:nomeDoAudio forKey:@"nome"];
-    printf("Arquivo criado em: %s\n", [[newMusica valueForKey:@"pathUrl"] UTF8String]);
+    NSManagedObject *newSound = [NSEntityDescription insertNewObjectForEntityForName:@"Musica" inManagedObjectContext:context];
+    [newSound setValue:pathUrl.path forKey:@"pathUrl"];
+    [newSound setValue:nomeDoAudio forKey:@"nome"];
+    [newSound setValue:sharedManager.text forKey:@"diretorio"];
+    printf("Arquivo criado em: %s\n", [[newSound valueForKey:@"pathUrl"] UTF8String]);
     printf("Url gravada no banco!\n");
     
     //error handler

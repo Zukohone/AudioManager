@@ -74,32 +74,52 @@
     [self.delegate AdicionarBibliotecaViewControllerDidCancelar:self];
 }
 
+-(void)alertaNomeVazio{
+    
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Empty name"
+                                                 message:@"The name of collection can't be empty."
+                                                delegate:self
+                                       cancelButtonTitle:@"OK"
+                                       otherButtonTitles:nil, nil];
+    
+    
+    [av show];
+}
 - (IBAction)pronto:(id)sender
 {
-    //Cria novo diretorio com base nos dados das labels
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0]; // pega o diretorio Documents
-    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:self.labelNome.text];
-    NSError *err = nil;
-    if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath]){
-        [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&err];
+    if (self.labelNome.text.length == 0) {
+        [self alertaNomeVazio];
+    }else{
+        
+        //Cria novo diretorio com base nos dados das labels
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0]; // pega o diretorio Documents
+        NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:self.labelNome.text];
+        NSError *err = nil;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath]){
+            [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&err];
+        }
+        
+        // cria novo ManagedObject e salva os dados no BD
+        NSManagedObjectContext *context = [self managedObjectContext];
+        NSManagedObject *newDir = [NSEntityDescription insertNewObjectForEntityForName:@"Biblioteca" inManagedObjectContext:context];
+        [newDir setValue:self.labelNome.text forKey:@"nomeDir"];
+        [newDir setValue:dataPath forKey:@"dirPath"];
+        [newDir setValue:self.labelDesc.text forKey:@"descricao"];
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Não salvou no banco. Erro: %@ %@", error, [error localizedDescription]);
+        }
+        printf("Pasta %s criada.\nURL:%s \n", [[newDir valueForKey:@"nomeDir"] UTF8String], [[newDir valueForKey:@"dirPath"] UTF8String]);
+        
+        
+        //retorna a view anterior
+        [self.delegate AdicionarBibliotecaViewControllerDidPronto:self];
     }
-    
-    // cria novo ManagedObject e salva os dados no BD
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSManagedObject *newDir = [NSEntityDescription insertNewObjectForEntityForName:@"Biblioteca" inManagedObjectContext:context];
-    [newDir setValue:self.labelNome.text forKey:@"nomeDir"];
-    [newDir setValue:dataPath forKey:@"dirPath"];
-    [newDir setValue:self.labelDesc.text forKey:@"descricao"];
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Não salvou no banco. Erro: %@ %@", error, [error localizedDescription]);
-    }
-    printf("Pasta %s criada.\nURL:%s \n", [[newDir valueForKey:@"nomeDir"] UTF8String], [[newDir valueForKey:@"dirPath"] UTF8String]);
-    
-    
-    //retorna a view anterior
-    [self.delegate AdicionarBibliotecaViewControllerDidPronto:self];
 }
+
+
+
+
 
 @end

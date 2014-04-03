@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioPlayer.h"
+#import "TituloCell.h"
 
 @interface BibliotecaViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *Vetor;
+@property AudioPlayer *audio;
+@property (strong, nonatomic) NSMutableArray *sondsList;
+@property (strong, nonatomic) NSMutableArray *sondsListClean;
+@property (weak, nonatomic) IBOutlet UIButton *playPause;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
+-(IBAction)playPauseTapped:(id)sender;
 
 @end

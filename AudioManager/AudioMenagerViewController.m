@@ -14,6 +14,8 @@
 
 @implementation AudioMenagerViewController
 
+@synthesize titulo;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -26,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //singleton
+    [self setTitulo:[TituloCell sharedTituloCell]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -37,6 +42,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [self setTitulo:[TituloCell sharedTituloCell]];
     
     // Fetch the musicas from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -61,6 +68,15 @@
         UINavigationController *navigationController = segue.destinationViewController;
         AdicionarBibliotecaViewController *add = [navigationController viewControllers][0];
         add.delegate = self;
+    }
+    
+    if ([segue.identifier isEqualToString:@"Cell"])
+    {
+        UITableViewCell* cell = sender;
+        
+        
+        [[self titulo] setText:cell.textLabel.text];
+
     }
 }
 

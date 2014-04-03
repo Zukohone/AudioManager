@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AdicionarBibliotecaViewController.h"
+#import "TituloCell.h"
 
 @interface AudioMenagerViewController : UITableViewController <AdicionarBibliotecaViewControllerDelegate>
 
 @property (strong) NSMutableArray *bibliotecas;
 
+@property TituloCell* titulo;
 
 @end
