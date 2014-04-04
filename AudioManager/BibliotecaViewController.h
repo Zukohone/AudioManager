@@ -7,17 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AudioPlayer.h"
+#import <AVFoundation/AVFoundation.h>
 #import "TituloCell.h"
+#import "Musica.h"
 
-@interface BibliotecaViewController : UITableViewController
+@interface BibliotecaViewController : UITableViewController <AVAudioPlayerDelegate>
 
-@property AudioPlayer *audio;
 @property (strong, nonatomic) NSMutableArray *sondsList;
-@property (strong, nonatomic) NSMutableArray *sondsListClean;
-@property (weak, nonatomic) IBOutlet UIButton *playPause;
-@property (weak, nonatomic) IBOutlet UISlider *slider;
 
--(IBAction)playPauseTapped:(id)sender;
 
 @end

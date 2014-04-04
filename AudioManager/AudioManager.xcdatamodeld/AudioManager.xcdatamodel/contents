@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Biblioteca" syncable="YES">
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dirPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nomeDir" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Musica" syncable="YES">
+    <entity name="Musica" representedClassName="Musica" syncable="YES">
         <attribute name="diretorio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pathUrl" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Biblioteca" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Musica" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Biblioteca" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Musica" positionX="0" positionY="0" width="128" height="90"/>
     </elements>
 </model>

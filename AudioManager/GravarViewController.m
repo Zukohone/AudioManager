@@ -10,8 +10,6 @@
 
 @interface GravarViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *gravarBT;
-
 
 @end
 
@@ -20,11 +18,19 @@
 
 - (IBAction)gravarBTtap:(id)sender {
     
+    [self setGravador:nil];
+    
     UIButton *gravarBT = (UIButton*)sender;
     if (gravarBT.selected == NO) {
         [gravarBT setImage:[UIImage imageNamed:@"micBT-ON.png"] forState:UIControlStateNormal];
+        [self setGravador:[[Gravador alloc] init]];
+        [self.gravador.gravador prepareToRecord];
+        [self.gravador.gravador record];
+        
     } else {
         [gravarBT setImage:[UIImage imageNamed:@"micBT.png"] forState:UIControlStateNormal];
+        [self.gravador.gravador stop];
+        
     }
     
     gravarBT.selected = !gravarBT.selected;
@@ -44,7 +50,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self setGravador:[[Gravador alloc] init]];
     
 }
 

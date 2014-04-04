@@ -38,7 +38,6 @@
 }
 
 
-
 -(void)preparaGravador{
     
     printf("Iniciando sessao de audio e suas configuracoes...\n");
@@ -73,10 +72,10 @@
     
     // Iniciando e preparando o gravador
     
-    gravador = [[AVAudioRecorder alloc] initWithURL:pathUrl settings:recordSetting error:NULL];
-    gravador.delegate = self;
-    gravador.meteringEnabled = YES;
-    [gravador prepareToRecord];
+    self.gravador = [[AVAudioRecorder alloc] initWithURL:pathUrl settings:recordSetting error:NULL];
+    self.gravador.delegate = self;
+    self.gravador.meteringEnabled = YES;
+    [self.gravador prepareToRecord];
     printf("Gravador preparado!\n");
     
     // cria um manageObject

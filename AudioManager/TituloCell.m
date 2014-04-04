@@ -21,6 +21,8 @@
     return sharedTituloCell;
 }
 
+
+
 - (id)init {
     if (self = [super init]) {
         text = [[NSString alloc] init];

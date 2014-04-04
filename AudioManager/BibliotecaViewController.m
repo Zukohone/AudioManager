@@ -9,12 +9,14 @@
 #import "BibliotecaViewController.h"
 
 @interface BibliotecaViewController ()
+@property NSString *nomeBiblioteca;
+@property AVAudioPlayer *player;
+@property NSIndexPath *hl;
 
 @end
 
 @implementation BibliotecaViewController
 
-@synthesize audio, sondsList, sondsListClean;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +34,8 @@
     //[self setAudio:[[AudioPlayer alloc] init]];
     
     TituloCell *sharedManager = [TituloCell sharedTituloCell];
+    
+    self.nomeBiblioteca = sharedManager.text;
     
     [[self navigationItem] setTitle:sharedManager.text];
 
@@ -56,44 +60,35 @@
     return context;
 }
 
-//-(void)filtra{
-//    for(int i = 0; i<self.sondsList.count; i++){
-//        if([self.sondsList)
-//    }
-//}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
     // Fetch the musicas from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Musica"];
     
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"diretorio == %@", [self nomeBiblioteca]];
+    [fetchRequest setPredicate:predicate];
+    
     self.sondsList = [[managedObjectContext executeFetchRequest:fetchRequest error:nil]mutableCopy];
-
     
     [self.tableView reloadData];
 }
 
-//player
--(IBAction)playPauseTapped:(id)sender
-{
-    
-    if (self.playPause.selected)
-    {
-        //[self.audio.player pause];
-        [self.playPause setImage:[UIImage imageNamed:@"pause.ico"]forState:UIControlStateNormal];
-        [self.playPause setSelected:NO];
-    }
-    else
-    {
-        //[self.audio.player play];
-        [self.playPause setImage:[UIImage imageNamed:@"play.ico"]forState:UIControlStateNormal];
-        [self.playPause setSelected:YES];
-    }
-}
-
+//- (IBAction)playPauseBTtap:(id)sender {
+//    NSLog(@"test");
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
+//    NSLog(@"%i",indexPath.row);
+//    
+//    NSManagedObject *sound = [self.sondsList objectAtIndex:0];
+//    NSLog(@"%@", [sound valueForKey:@"pathUrl"] );
+//    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[sound valueForKey:@"pathUrl"] ]error:nil];
+//    [self.player setDelegate:self];
+//    [self.player play];
+//    
+//}
 
 
 //tabela
@@ -106,41 +101,56 @@
 {
     return self.sondsList.count;
 }
--(void)filtro:(NSIndexPath *)indexPath{
-    TituloCell *sharedManager = [TituloCell sharedTituloCell];
-    NSManagedObject *sound = [self.sondsList objectAtIndex:indexPath.row];
-    
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    //MPMediaItem *song = [self.songsList objectAtIndex:indexPath.row];
-    //NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
-    //NSString *durationLabel = [song valueForProperty: MPMediaItemPropertyGenre];
-    
-    TituloCell *sharedManager = [TituloCell sharedTituloCell];
-    
     NSManagedObject *sound = [self.sondsList objectAtIndex:indexPath.row];
+    NSString* title= [NSString stringWithFormat:@"%@-%@", [self nomeBiblioteca], [sound valueForKey:@"nome"]];
     
-    [[cell textLabel] setText:[sound valueForKey:@"nome"]];
-    //[[cell detailTextLabel] setText:[biblioteca valueForKey:@"descricao"]];
-    //cell.detailTextLabel.text = durationLabel;
+    [[cell textLabel] setText:title];
+    
+    
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //[self.audio.player pause];
-    //MPMediaItem *song = [self.songsList objectAtIndex:indexPath.row];
-    //AVPlayerItem * currentItem = [AVPlayerItem playerItemWithURL:[song valueForProperty:MPMediaItemPropertyAssetURL]];
     
-    //[self.audio.player replaceCurrentItemWithPlayerItem:currentItem];
-    //[self.audio.player play];
-    //[self.playPause setSelected:YES];
+    NSLog(@"%i",indexPath.row);
+
+}
+
+- (BOOL) deletaSound:(NSString*) path
+{
     
-    //[self.slider setMaximumValue:self.audio.player.currentItem.duration.value / self.audio.player.currentItem.duration.timescale];
+    return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+}
+
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *sound = [self.sondsList objectAtIndex:indexPath.row];
+    
+    //deleta a musica dentro da pasta
+    [self deletaSound:[sound valueForKey:@"pathUrl"]];
+    
+    
+    // Delete object from database
+    [context deleteObject:[self.sondsList objectAtIndex:indexPath.row]];
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        NSLog(@"Erro ao deletar! : %@ %@", error, [error localizedDescription]);
+        return;
+    }
+    
+    // Remove device from table view
+    [self.sondsList removeObjectAtIndex:indexPath.row];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

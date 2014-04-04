@@ -10,10 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "TituloCell.h"
 @interface Gravador : NSObject <AVAudioRecorderDelegate>
-{
-    AVAudioRecorder *gravador;
-}
 
+@property (strong) AVAudioRecorder *gravador;
 -(void)preparaGravador;
 - (NSString *) dateString;
 @end

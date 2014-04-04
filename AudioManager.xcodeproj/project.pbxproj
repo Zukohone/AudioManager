@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2086E51C18EE2AF900ED2F10 /* Musica.m in Sources */ = {isa = PBXBuildFile; fileRef = 2086E51B18EE2AF900ED2F10 /* Musica.m */; };
+		20C2788318EE6E3D0004EA08 /* SoundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C2788218EE6E3D0004EA08 /* SoundTableViewCell.m */; };
 		B70BDD7718EC867E00CF4D94 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70BDD7618EC867E00CF4D94 /* CoreMedia.framework */; };
 		B70BDD7918EC868600CF4D94 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70BDD7818EC868600CF4D94 /* MediaPlayer.framework */; };
 		B721580518EB3B7800F90D7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B721580418EB3B7800F90D7F /* AVFoundation.framework */; };
@@ -14,7 +16,6 @@
 		B721580918EB42C800F90D7F /* Gravador.m in Sources */ = {isa = PBXBuildFile; fileRef = B721580818EB42C800F90D7F /* Gravador.m */; };
 		B72BB41C18EDDAB200737245 /* micBT-ON.png in Resources */ = {isa = PBXBuildFile; fileRef = B72BB41A18EDDAB200737245 /* micBT-ON.png */; };
 		B72BB41D18EDDAB200737245 /* micBT.png in Resources */ = {isa = PBXBuildFile; fileRef = B72BB41B18EDDAB200737245 /* micBT.png */; };
-		B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73654FC18EB369100AAD0DB /* PlayerViewController.m */; };
 		B7B3889818EDE81400E406A7 /* TituloCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B3889718EDE81400E406A7 /* TituloCell.m */; };
 		B7B3889B18EDECF800E406A7 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B3889A18EDECF800E406A7 /* AudioPlayer.m */; };
 		B7E95E6218EB33B600B10E06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E95E6118EB33B600B10E06 /* Foundation.framework */; };
@@ -36,7 +37,6 @@
 		B7E95EA318EB33CD00B10E06 /* AdicionarBibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9A18EB33CD00B10E06 /* AdicionarBibliotecaViewController.m */; };
 		B7E95EA418EB33CD00B10E06 /* BibliotecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */; };
 		B7E95EA518EB33CD00B10E06 /* GravarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */; };
-		B7E95EA618EB33CD00B10E06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E95EA018EB33CD00B10E06 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2086E51A18EE2AF900ED2F10 /* Musica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Musica.h; sourceTree = "<group>"; };
+		2086E51B18EE2AF900ED2F10 /* Musica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Musica.m; sourceTree = "<group>"; };
+		20C2788118EE6E3D0004EA08 /* SoundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundTableViewCell.h; path = ../SoundTableViewCell.h; sourceTree = "<group>"; };
+		20C2788218EE6E3D0004EA08 /* SoundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundTableViewCell.m; path = ../SoundTableViewCell.m; sourceTree = "<group>"; };
 		B70BDD7618EC867E00CF4D94 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B70BDD7818EC868600CF4D94 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		B721580218EB3B6C00F90D7F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -58,8 +62,6 @@
 		B721580818EB42C800F90D7F /* Gravador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gravador.m; sourceTree = "<group>"; };
 		B72BB41A18EDDAB200737245 /* micBT-ON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "micBT-ON.png"; sourceTree = "<group>"; };
 		B72BB41B18EDDAB200737245 /* micBT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micBT.png; sourceTree = "<group>"; };
-		B73654FB18EB369100AAD0DB /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
-		B73654FC18EB369100AAD0DB /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		B7B3889618EDE81400E406A7 /* TituloCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TituloCell.h; sourceTree = "<group>"; };
 		B7B3889718EDE81400E406A7 /* TituloCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TituloCell.m; sourceTree = "<group>"; };
 		B7B3889918EDECF800E406A7 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 		B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BibliotecaViewController.m; sourceTree = "<group>"; };
 		B7E95E9D18EB33CD00B10E06 /* GravarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GravarViewController.h; sourceTree = "<group>"; };
 		B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GravarViewController.m; sourceTree = "<group>"; };
-		B7E95E9F18EB33CD00B10E06 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B7E95EA018EB33CD00B10E06 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +162,6 @@
 		B7E95E6918EB33B600B10E06 /* AudioManager */ = {
 			isa = PBXGroup;
 			children = (
-				B73654FB18EB369100AAD0DB /* PlayerViewController.h */,
-				B73654FC18EB369100AAD0DB /* PlayerViewController.m */,
 				B7E95E7218EB33B600B10E06 /* AppDelegate.h */,
 				B7E95E7318EB33B600B10E06 /* AppDelegate.m */,
 				B7E95E9618EB33CD00B10E06 /* Main.storyboard */,
@@ -175,16 +173,18 @@
 				B7E95E9A18EB33CD00B10E06 /* AdicionarBibliotecaViewController.m */,
 				B7B3889918EDECF800E406A7 /* AudioPlayer.h */,
 				B7B3889A18EDECF800E406A7 /* AudioPlayer.m */,
+				20C2788118EE6E3D0004EA08 /* SoundTableViewCell.h */,
+				20C2788218EE6E3D0004EA08 /* SoundTableViewCell.m */,
 				B7E95E9B18EB33CD00B10E06 /* BibliotecaViewController.h */,
 				B7E95E9C18EB33CD00B10E06 /* BibliotecaViewController.m */,
 				B7E95E9D18EB33CD00B10E06 /* GravarViewController.h */,
 				B7E95E9E18EB33CD00B10E06 /* GravarViewController.m */,
 				B721580718EB42C800F90D7F /* Gravador.h */,
 				B721580818EB42C800F90D7F /* Gravador.m */,
-				B7E95E9F18EB33CD00B10E06 /* ViewController.h */,
-				B7E95EA018EB33CD00B10E06 /* ViewController.m */,
 				B7E95E7818EB33B600B10E06 /* Images.xcassets */,
 				B7E95E7518EB33B600B10E06 /* AudioManager.xcdatamodeld */,
+				2086E51A18EE2AF900ED2F10 /* Musica.h */,
+				2086E51B18EE2AF900ED2F10 /* Musica.m */,
 				B7E95E6A18EB33B600B10E06 /* Supporting Files */,
 			);
 			path = AudioManager;
@@ -322,15 +322,15 @@
 				B7E95E7718EB33B600B10E06 /* AudioManager.xcdatamodeld in Sources */,
 				B7E95E7418EB33B600B10E06 /* AppDelegate.m in Sources */,
 				B7B3889818EDE81400E406A7 /* TituloCell.m in Sources */,
-				B7E95EA618EB33CD00B10E06 /* ViewController.m in Sources */,
 				B7E95EA318EB33CD00B10E06 /* AdicionarBibliotecaViewController.m in Sources */,
 				B7E95EA518EB33CD00B10E06 /* GravarViewController.m in Sources */,
+				2086E51C18EE2AF900ED2F10 /* Musica.m in Sources */,
 				B7E95E7018EB33B600B10E06 /* main.m in Sources */,
 				B7B3889B18EDECF800E406A7 /* AudioPlayer.m in Sources */,
 				B7E95EA418EB33CD00B10E06 /* BibliotecaViewController.m in Sources */,
 				B7E95EA218EB33CD00B10E06 /* AudioMenagerViewController.m in Sources */,
-				B73654FD18EB369100AAD0DB /* PlayerViewController.m in Sources */,
 				B721580918EB42C800F90D7F /* Gravador.m in Sources */,
+				20C2788318EE6E3D0004EA08 /* SoundTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

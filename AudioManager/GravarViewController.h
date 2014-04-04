@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Gravador.h"
 
-@interface GravarViewController : UIViewController
+@interface GravarViewController : UIViewController <AVAudioRecorderDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *gravarBT;
 @property Gravador * gravador;
 @end
