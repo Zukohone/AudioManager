@@ -10,7 +10,6 @@
 
 @implementation SoundTableViewCell
 
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -19,16 +18,6 @@
     }
     return self;
 }
-
-- (IBAction)playPauseBTtap:(id)sender {
-    
-//    UITableView* tableView = (UITableView *)self.superview;
-//    NSIndexPath* pathOfTheCell = [tableView indexPathForCell:self];
-//    NSInteger rowOfTheCell = pathOfTheCell.row;
-//    NSLog(@"rowofthecell %d", rowOfTheCell);
-    
-}
-
 
 - (void)awakeFromNib
 {
@@ -42,5 +31,4 @@
     // Configure the view for the selected state
 
 }
-
 @end

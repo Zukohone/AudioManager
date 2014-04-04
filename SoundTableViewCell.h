@@ -10,5 +10,5 @@
 #import "BibliotecaViewController.h"
 
 @interface SoundTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIButton *playPauseBT;
+
 @end

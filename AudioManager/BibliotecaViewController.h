@@ -11,7 +11,7 @@
 #import "TituloCell.h"
 #import "Musica.h"
 
-@interface BibliotecaViewController : UITableViewController <AVAudioPlayerDelegate>
+@interface BibliotecaViewController : UITableViewController <AVAudioPlayerDelegate>;
 
 @property (strong, nonatomic) NSMutableArray *sondsList;
 

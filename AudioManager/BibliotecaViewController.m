@@ -11,7 +11,6 @@
 @interface BibliotecaViewController ()
 @property NSString *nomeBiblioteca;
 @property AVAudioPlayer *player;
-@property NSIndexPath *hl;
 
 @end
 
@@ -77,18 +76,6 @@
     [self.tableView reloadData];
 }
 
-//- (IBAction)playPauseBTtap:(id)sender {
-//    NSLog(@"test");
-//    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell *)[[sender superview] superview]];
-//    NSLog(@"%i",indexPath.row);
-//    
-//    NSManagedObject *sound = [self.sondsList objectAtIndex:0];
-//    NSLog(@"%@", [sound valueForKey:@"pathUrl"] );
-//    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[sound valueForKey:@"pathUrl"] ]error:nil];
-//    [self.player setDelegate:self];
-//    [self.player play];
-//    
-//}
 
 
 //tabela
@@ -111,15 +98,19 @@
     
     [[cell textLabel] setText:title];
     
-    
-    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%i",indexPath.row);
+    self.player = nil;
+    NSManagedObject *sound = [self.sondsList objectAtIndex:indexPath.row];
+    NSLog(@"%@", [sound valueForKey:@"pathUrl"] );
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[sound valueForKey:@"pathUrl"] ]error:nil];
+    [self.player setDelegate:self];
+    [self.player play];
 
+    
 }
 
 - (BOOL) deletaSound:(NSString*) path

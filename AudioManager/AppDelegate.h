@@ -1,3 +1,10 @@
+//
+//  AppDelegate.h
+//  AudioManager
+//
+//  Created by ICARO NASCIMENTO FERREIRA on 01/04/14.
+//  Copyright (c) 2014 ICARO NASCIMENTO FERREIRA. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 

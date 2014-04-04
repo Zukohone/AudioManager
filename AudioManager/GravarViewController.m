@@ -18,8 +18,6 @@
 
 - (IBAction)gravarBTtap:(id)sender {
     
-    [self setGravador:nil];
-    
     UIButton *gravarBT = (UIButton*)sender;
     if (gravarBT.selected == NO) {
         [gravarBT setImage:[UIImage imageNamed:@"micBT-ON.png"] forState:UIControlStateNormal];
